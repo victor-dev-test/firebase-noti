@@ -1,10 +1,10 @@
 import './App.css';
-import { useFirebaseNotifiactions } from './hooks/useFirebaseNotifiactions';
+import { requestPermission, useFirebaseNotifiactions } from './hooks/useFirebaseNotifiactions';
 
 
 function App() {
-  const {isTokenFound} =useFirebaseNotifiactions()
-  console.log("🚀 ~ file: App.js:7 ~ isTokenFound:", isTokenFound)
+  const a =useFirebaseNotifiactions()
+  // console.log("🚀 ~ file: App.js:7 ~ isTokenFound:", isTokenFound)
 
 
   return (
@@ -21,3 +21,5 @@ function App() {
 }
 
 export default App;
+
+
