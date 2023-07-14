@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import { useFirebaseNotifiactions } from './hooks/useFirebaseNotifiactions';
+
 
 function App() {
+  const {isTokenFound} =useFirebaseNotifiactions()
+  console.log("🚀 ~ file: App.js:7 ~ isTokenFound:", isTokenFound)
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      home page
+      {/* {isTokenFound && 
+      ' Notification permission enabled 👍🏻 '
+      }
+      {!isTokenFound && 
+      'Need notification permission ❗️ '
+      } */}
     </div>
   );
 }
